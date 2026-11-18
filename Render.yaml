@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: n8n-render
+    env: docker
+    plan: free
+    buildCommand: ""
+    startCommand: ""
+    envVars:
+      - key: N8N_ENCRYPTION_KEY
+        generateValue: true
+      - key: WEBHOOK_URL
+        sync: false
